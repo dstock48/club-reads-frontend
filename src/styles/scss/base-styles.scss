@@ -43,10 +43,50 @@ body {
     .nav-link {
       margin: 0 10px;
       text-decoration: none;
+      font-size: 18px;
       color: $primaryDarkColor;
-      background-color: $accentColor;
-      border-radius: 4px;
-      padding: 5px;
+      border-bottom: 2px solid transparent;
+      transition: 200ms;
+
+      &:hover {
+        border-bottom: 2px solid $accentColor;
+      }
     }
+  }
+}
+
+
+// M E D I A  Q U E R I E S /////////////////////////
+/////////////////////////////////////////////////////
+
+@media screen and (min-width: 650px) {
+  .header-component {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+
+    .logo {
+      margin-bottom: 0;
+    }
+
+    .nav-link-container {
+      display: flex;
+      justify-content: center;
+
+      .nav-link {
+        margin: 0 10px;
+        color: $primaryDarkColor;
+
+        &:hover {
+          padding-bottom: 3px;
+          transform: translateY(-5px);
+        }
+        &:active {
+          transform: translateY(-3px);
+          padding-bottom: 1px;
+        }
+      }
+    }
+
   }
 }

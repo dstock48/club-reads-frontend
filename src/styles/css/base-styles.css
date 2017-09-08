@@ -26,9 +26,31 @@ body {
     .header-component .nav-link-container .nav-link {
       margin: 0 10px;
       text-decoration: none;
+      font-size: 18px;
       color: #311E11;
-      background-color: #CDC08B;
-      border-radius: 4px;
-      padding: 5px; }
+      border-bottom: 2px solid transparent;
+      transition: 200ms; }
+      .header-component .nav-link-container .nav-link:hover {
+        border-bottom: 2px solid #CDC08B; }
+
+@media screen and (min-width: 650px) {
+  .header-component {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between; }
+    .header-component .logo {
+      margin-bottom: 0; }
+    .header-component .nav-link-container {
+      display: flex;
+      justify-content: center; }
+      .header-component .nav-link-container .nav-link {
+        margin: 0 10px;
+        color: #311E11; }
+        .header-component .nav-link-container .nav-link:hover {
+          padding-bottom: 3px;
+          transform: translateY(-5px); }
+        .header-component .nav-link-container .nav-link:active {
+          transform: translateY(-3px);
+          padding-bottom: 1px; } }
 
 /*# sourceMappingURL=base-styles.css.map */
